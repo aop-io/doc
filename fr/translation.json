@@ -1,0 +1,10 @@
+{
+  "lang": "fr",
+  "API doc" : "API doc",
+  "search"  : "chercher",
+  "about"   : "à propos",
+  "learn"   : "apprendre",
+  "documentation"               : "documentation",
+  "aspect oriented programming" : "Programmation Orienté Aspect",
+  "link.contribute.doc" : "<a href=\"%link%\" title=\"Contribuer à la doc\">Participer à la documentation de l'AOP</a>"
+}
