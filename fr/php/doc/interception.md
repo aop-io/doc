@@ -32,11 +32,11 @@ Aop::addBefore('Article::add()', function($jp) {
 });
 ```
 
-Dans cet exemple, considérons que nous avons un validateur `SomeValidator::validateArticle()` qui vérifie que les données sont valides et qui fait quelques pré-traitement, par exemple le validateur créée l'URL de l'article à partir du titre pour avoir une belle URL (slug).
+Dans cet exemple, considérons que nous avons un validateur `SomeValidator::validateArticle()` qui vérifie que les données sont valides et qui fait quelques pré-traitement, par exemple le validateur crée l'URL de l'article à partir du titre pour avoir une belle URL (slug).
 
-Si la validation échoue alors une `Exception` PHP est levée, la méthode `$jp->setArgs()` n'est donc pas exécutée compte tenu qu'une exception PHP a interompu l'éxecution du code.
+Si la validation échoue alors une `Exception` PHP est levée, la méthode `$jp->setArgs()` n'est donc pas exécutée compte tenu qu'une exception PHP a interrompu l'éxecution du code.
 
-Dans le cas où il n'y a pas d'erreur la méthode `$jp->setArgs()` change les arguments que la méthode
+Dans le cas où il n'y a pas d'erreur, la méthode `$jp->setArgs()` change les arguments que la méthode
 `Article::add()` va recevoir, par ceux retournés par le validateur `SomeValidator::validateArticle()`.
 
 Dans ce contexte :
@@ -92,7 +92,7 @@ Aop::addAround('Article::get()', function($jp) {
 });
 ```
 
-Dans cet exemple nous avons ajouter un système de cache sans toucher à la méthode `Article::get()`.
+Dans cet exemple, nous avons ajouté un système de cache sans toucher à la méthode `Article::get()`.
 Ainsi le code métier est intact, la méthode `Àrticle::get()` ne s'occuppe que de récupérer un article donné.
 
 Dans ce contexte :
@@ -101,7 +101,7 @@ Dans ce contexte :
 
 Ce qui concerne la stratégie de cache est traité hors du code métier, ce qui rend la méthode `Article::get()` plus simple à maintenir et notre code est plus modulaire car nous avons séparé un aspect technique du code métier.
 
-A partir de là il est très simple par exemple en environnement de développement, de désactiver le cache et d'ajouter un système de debug, sans toucher au code métier :)
+A partir de là, par exemple il est très simple en environnement de développement, de désactiver le cache et d'ajouter un système de debug, sans toucher au code métier :)
 
 
 ## Aop::addAfterReturn()
@@ -134,7 +134,7 @@ Aop::addAfterReturn('Article::save()', function($jp) {
 });
 ```
 
-Dans cet exemple nous mettons à jour le cache d'un article lorsque celui est modifié dans la base de données.
+Dans cet exemple, nous mettons à jour le cache d'un article lorsque celui est modifié dans la base de données.
 
 Dans ce contexte :
   * le kind est [Aop::KIND_AFTER_METHOD_RETURN](/api/php/class-aop-kindconstantinterface.html#KIND_AFTER_METHOD_RETURN)
@@ -168,7 +168,7 @@ Aop::addAfterThrow('PDO::*()', function($jp) {
 });
 ```
 
-Dans cet exemple nous ajoutons un log d'erreur à chaque erreur générée par les méthodes de `PDO`.
+Dans cet exemple, nous ajoutons un log d'erreur à chaque erreur générée par les méthodes de `PDO`.
 
 Dans ce contexte :
   * le kind est [Aop::KIND_AFTER_METHOD_THROW](/api/php/class-aop-kindconstantinterface.html#KIND_AFTER_METHOD_THROW)
@@ -184,7 +184,7 @@ Aop::addAfterThrow('mysqli_*()', function($jp) {
 });
 ```
 
-Dans cet exemple nous ajoutons un log d'erreur à chaque erreur générée par les fonctions `mysqli` de PHP.
+Dans cet exemple, nous ajoutons un log d'erreur à chaque erreur générée par les fonctions `mysqli` de PHP.
 
 Dans ce contexte :
   * le kind est [Aop::KIND_AFTER_FUNCTION_THROW](/api/php/class-aop-kindconstantinterface.html#KIND_AFTER_FUNCTION_THROW)
@@ -198,7 +198,7 @@ Ajoute l'advice _après_ une action.
 Cette méthode fournit un `JoinPoint` équivalent `Aop::addAfterReturn()` + `Aop::addAfterThrow()`
 réunies en un seul objet.
 
-`Aop::addAfter()` offre donc les même possibilités que `Aop::addAfterReturn()` et `Aop::addAfterThrow()`.
+`Aop::addAfter()` offre donc les mêmes possibilités que `Aop::addAfterReturn()` et `Aop::addAfterThrow()`.
 
 Signature de la méthode [Aop::addAfter()](/api/php/class-aop-aop.html#_addAfter) :
 

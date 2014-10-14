@@ -9,7 +9,7 @@ Fournit une couche d'abstration à l'extension _PECL AOP_,
 avec de nombreuses fonctionnalités pour aller plus loin dans la manipulation de l'AOP avec PHP,
 au-delà des possibilités de l'extension de _PECL_.
 
-La documentation qui suit concidaire que vous avez déjà installé la [lib PHP de AOP.io](https://github.com/aop-io/php-aop).
+La documentation qui suit considaire que vous avez déjà installé la [lib PHP de AOP.io](https://github.com/aop-io/php-aop).
 
 
 ## Démarrage
@@ -22,9 +22,7 @@ Vous pouvez au choix utiliser _pecl_
     sudo pecl install aop-beta
 ```
 
-ou
-
-Téléchargez l'extension _AOP PHP_ depuis Github, compilez et ajoutez l'extension à votre _php.ini_
+ou télécharger l'extension _AOP PHP_ depuis Github, compiler et ajouter l'extension à votre _php.ini_
 
 ```sh
     #Clone the repository on your computer

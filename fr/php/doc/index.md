@@ -7,12 +7,10 @@ title : Documentation de PHP AOP
 ## AOP ?
 
 L'_AOP_ ("Aspect Oriented Programming", en français : "Programmation Orienté Aspect") est un paradigme de programmation.
-
-Tout comme la _POO_ propose un style de programmation avec ses caractéristiques, l'_AOP_ en propose un autre avec d'autres caractéristiques.
+<br>Tout comme la _POO_ propose un style de programmation avec ses caractéristiques, l'_AOP_ en propose un autre avec d'autres caractéristiques.
 
 Pour faire court, l'_AOP_ propose un style de programmation pour intercepter du code et en changer le comportement.
-
-L'_AOP_ permet de rendre son code encore plus modulaire en séparrant le code métier et les aspects techniques (préoccupations transversales) tels que la gestion du cache, log, debug, ...
+<br>L'_AOP_ permet de rendre son code encore plus modulaire en séparrant le code métier et les aspects techniques (préoccupations transversales) tels que la gestion du cache, log, debug, ...
 
 A noter que l'_AOP_ s'utilise parfaitement en programmation orienté objet (POO), tout comme en programmation procédurale.
 
