@@ -12,8 +12,8 @@ title : Programmation Orienté Aspect
         alt="Middleware">
       <h2 class="pull-left">Middleware</h2>
       <div class="clearfix"></div>
-        L'Aop permet d'agir avant (before), autour (around)
-        et après (after) une portion de code (fonction, méthode ou propriété de classe) en interceptant l'accès à cette portion de code.
+        L'AOP permet d'agir avant (before), autour (around)
+        et après (after) une portion de code (fonction, méthode ou propriété de classe), en interceptant l'accès à cette portion de code.
         <br><br>
         <span class="fa fa-life-ring"></span> Le type d'interception supporté
         dépend de l'intercepteur utilisé. Certains intercepteurs tels que
@@ -47,7 +47,7 @@ Aop::addAround('Article::add()', function($jp) {
       <h2 class="pull-left">Intuitif</h2>
       <div class="clearfix"></div>
         Des méthodes simples et flexibles pour améliorer la productivité.<br>
-        Un code métier facile à maintenir épuré de tous les aspects techniques
+        Un code métier facile à maintenir, épuré de tous les aspects techniques
         (cache, log, debug, ...).
         <br><br>
         Le raisonnement en programmation orienté objet,
@@ -56,7 +56,7 @@ Aop::addAround('Article::add()', function($jp) {
         Je veux :
         <ul>
           <li>me concentrer sur le code métier (exemple créer un article, modifier, supprimer)</li>
-          <li>intercepter l'appel de cette fonction pour remplacer sa valeur de retour
+          <li>intercepter l'appel de cette fonction, pour remplacer sa valeur de retour
           selon le contexte</li>
           <li>intercepter et logger les erreurs</li>
             <li>gérer finement le cache de toute mon application</li>
@@ -102,7 +102,7 @@ Aop::addAfterThrow('*::*', $callback);
         alt="Intercepter du code avec l'AOP">
       <h2 class="pull-left">Agir sans toucher le code métier</h2>
       <div class="clearfix"></div>
-      L'AOP permet d'ajouter une fonctionnalité dans un code métier
+      L'AOP permet d'ajouter une fonctionnalité dans un code métier,
       sans y insérer une seule ligne de code à l'intérieur.
       La portion de code est interceptée lors de son exécution (pointcut)
       et vous prenez le contrôle via une fonction de rappel (advice).
@@ -123,7 +123,7 @@ Aop::addAfterThrow('*::*', $callback);
       <br><br>
       On peut intercepter le code avant (before) son exécution, après (after) et autour (around).
       <br>
-      Dans cet exemple nous interceptons la fonction de connexion de WordPress `wp_signon()`
+      Dans cet exemple, nous interceptons la fonction de connexion de WordPress `wp_signon()`
       (http://codex.wordpress.org/Function_Reference/wp_signon).
       <br>
       L'interception est de type "around" (autour) pour
